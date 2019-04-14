@@ -1,5 +1,6 @@
-package com.sebastian.sbhibernate;
+package com.sebastian.sbhibernate.test;
 
+import com.sebastian.sbhibernate.config.PersistenciaConfig;
 import com.sebastian.sbhibernate.dominio.Familia;
 import com.sebastian.sbhibernate.dominio.Persona;
 import com.sebastian.sbhibernate.persistencia.FamiliaDAO;
@@ -10,11 +11,11 @@ import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@ContextConfiguration(classes={PersistenciaConfig.class, PersonaDAO.class, FamiliaDAO.class})
 public class SbHibernateApplicationTests {
 
     @Autowired

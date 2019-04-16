@@ -6,7 +6,6 @@ open module com.sebastian.sbhibernate {
     requires spring.boot.starter.jdbc;
     requires com.zaxxer.hikari;
     requires spring.jdbc;
-    requires jakarta.activation;
     requires java.persistence;
     requires java.transaction;
     requires org.hibernate.orm.core;
